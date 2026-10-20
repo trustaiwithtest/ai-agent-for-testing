@@ -1,0 +1,16 @@
+{
+  "name": "ai-agent-for-testing",
+  "version": "1.0.0",
+  "description": "A tutorial project for functional and non-functional test automation with AI assistance.",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:report": "playwright show-report"
+  },
+  "keywords": ["playwright", "testing", "automation", "tutorial"],
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.56.0"
+  }
+}
