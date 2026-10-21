@@ -21,9 +21,14 @@ module.exports = defineConfig({
   use: {
     // Start every relative URL from the demo shop.
     baseURL: 'https://www.saucedemo.com',
-    // Keep a trace (a step-by-step recording) only when a test is retried.
-    trace: 'on-first-retry',
-    // Save a screenshot only when a test fails.
+    // saucedemo marks its elements with data-test="...", so getByTestId()
+    // should look at that attribute instead of the default data-testid.
+    testIdAttribute: 'data-test',
+    // Evidence for failed tests (open it from the HTML report):
+    //   - trace: a step-by-step recording you can replay, with the page,
+    //     network and console at every step. Kept only when a test fails.
+    trace: 'retain-on-failure',
+    //   - screenshot: a picture of the page at the moment of failure.
     screenshot: 'only-on-failure',
   },
 

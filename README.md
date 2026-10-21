@@ -29,6 +29,14 @@ You need Node.js LTS (version 18 or newer) installed.
    npm run test:report
    ```
    To watch the browser while the tests run, use `npm run test:headed`.
+   To step through tests one action at a time, use `npm run test:ui`.
+
+## When a test fails
+
+Playwright keeps evidence for every failed test in `test-results/`:
+
+- `test-failed-1.png` - a screenshot of the page at the moment it failed.
+- `trace.zip` - a full recording. Open it from the HTML report (`npm run test:report`, then click the failed test and "Trace"), or run `npx playwright show-trace <path-to-trace.zip>`. You can scroll through every step and see the page, clicks, network calls and console messages.
 
 ## Project layout
 
@@ -44,4 +52,5 @@ You need Node.js LTS (version 18 or newer) installed.
 
 ## Lessons so far
 
-- **Lesson 0 - `tests/saucedemo-login.spec.js`**: opens the Swag Labs demo shop, logs in as a standard user and checks the products page.
+- **Lesson 0**: opens the Swag Labs demo shop, logs in as a standard user and checks the products page.
+- **Lesson 1 - `tests/saucedemo-login.spec.js`**: tests the login page from four angles: valid user, locked-out user, wrong password and empty form. Introduces `test.describe`, `beforeEach`, user-facing locators (`getByLabel`, `getByRole`, `getByTestId`), auto-waiting, and screenshots and traces on failure.
