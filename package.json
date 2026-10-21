@@ -8,7 +8,12 @@
     "test:headed": "playwright test --headed",
     "test:report": "playwright show-report"
   },
-  "keywords": ["playwright", "testing", "automation", "tutorial"],
+  "keywords": [
+    "playwright",
+    "testing",
+    "automation",
+    "tutorial"
+  ],
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.56.0"
