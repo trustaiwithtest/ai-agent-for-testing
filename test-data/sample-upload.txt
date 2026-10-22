@@ -1,0 +1,2 @@
+Hello from the Playwright tutorial.
+This small file is used by the file upload lesson.

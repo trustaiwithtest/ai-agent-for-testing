@@ -7,7 +7,8 @@
 | 2026-10-20 | Phase 0 | Blocked | Push to GitHub not possible from the Cowork session (GitHub token invalid, no GitHub account linked). Repo not yet created on GitHub. |
 | 2026-10-21 | Phase 0 | Done | Login test passes locally (Node 24). Repo created at github.com/trustaiwithtest/ai-agent-for-testing; `phase-0-setup` pushed; gh CLI logged in. |
 | 2026-10-21 | Phase 1 | Done | Login spec covers valid, locked-out, wrong password and empty form (4 tests passing). Locators switched to getByLabel/getByRole/getByTestId (`testIdAttribute: 'data-test'`). Traces now kept on every failure (`retain-on-failure`); screenshot and trace confirmed by a deliberately failing run. Added `npm run test:ui`. |
+| 2026-10-22 | Phase 2 | Done | Six specs in `tests/the-internet/` (dropdown, checkboxes, iframes, alerts, file upload, dynamic waits), 19 tests. Each file sets its own baseURL with `test.use`. All 23 tests pass locally; new specs passed 3x with `--repeat-each=3`. Sample upload file in `test-data/`. |
 
 ## Next steps
-1. Merge `phase-0-setup` and `phase-1-first-tests` into `main`.
-2. Start Phase 2: one spec per UI concept on the-internet.herokuapp.com (dropdowns, checkboxes, iframes, alerts, uploads, dynamic waits).
+1. Merge `phase-2-core-ui` into `main`.
+2. Start Phase 3: Page Object Model and a full purchase flow on saucedemo, with a custom fixture for a logged-in page.
